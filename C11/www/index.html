@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data gap  https://*.google.com  https://*.googleapis.com  https://*.gstatic.com  http://chart.apis.google.com https://*.googleusercontent.com 'unsafe-inline' 'unsafe-eval'; media-src *">
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+
+
+    <script src="lib/jquery-1.11.2.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <script type="application/javascript" src="https://maps.googleapis.com/maps/api/js?key=<YOUR API KEY>&amp;sensor=true&amp;libraries=places"></script>
+
+    <title>C11</title>
+</head>
+<body>
+
+<div data-role="main" class="ui-content">
+    <div id="mapFrame">
+        <div id="mapMyHome"></div>
+    </div>
+
+    <div class="ui-field-contain">
+        <input type="button" value="Where am I" id="btnWhere">
+    </div>
+
+    <div data-role="fieldcontainer">
+        <input type="text" name="txtPlace" id="txtPlace" placeholder="Where do you want to go today?">
+        <input type="button" value="GO" id="btnGo">
+    </div>
+
+    <div data-role="fieldcontainer">
+        <div class="ui-grid-b">
+            <div class="ui-block-a">
+                <input type="button" value="Cafe" id="btnCafe">
+            </div>
+
+            <div class="ui-block-b">
+                <input type="button" value="Store" id="btnStore">
+            </div>
+
+            <div class="ui-block-c">
+                <input type="button" value="Library" id="btnLibrary">
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+    <script type="text/javascript" src="scripts/common.js"></script>
+</body>
+</html>
